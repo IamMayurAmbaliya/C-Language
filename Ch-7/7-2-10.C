@@ -2,8 +2,7 @@
 #include<conio.h>
 void main()
 {
-	int j,i,sp,space=4;
-
+	int i,j,sp,space=4;
 	clrscr();
 
 	for(i=1; i<=5; i++)
@@ -14,11 +13,16 @@ void main()
 		}
 		space--;
 
-		for(j=i; j>=1; j--)
+		for(j=1; j<=i; j++)
+		{
+			printf("%d",j);
+		}
+
+		for(j=i-1; j>=1; j--)       // logic== i-1 bcoz 2nd line thi 1 levano che
 		{
 			printf("%d",j);
 		}
 		printf("\n");
-	}
+       }
 	getch();
 }

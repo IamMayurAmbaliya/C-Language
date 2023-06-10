@@ -2,8 +2,7 @@
 #include<conio.h>
 void main()
 {
-	int j,i,sp,space=4;
-
+	int i,j,sp,space=4;
 	clrscr();
 
 	for(i=1; i<=5; i++)
@@ -16,7 +15,12 @@ void main()
 
 		for(j=i; j>=1; j--)
 		{
-			printf("%d",j);
+			printf("*");
+		}
+
+		for(j=i-1; j>=1; j--)
+		{
+			printf("*");
 		}
 		printf("\n");
 	}

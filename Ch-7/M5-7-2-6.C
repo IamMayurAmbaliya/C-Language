@@ -1,9 +1,9 @@
+
 #include<stdio.h>
 #include<conio.h>
 void main()
 {
-	int j,i,sp,space=4;
-
+	int i,j,sp,space=0;
 	clrscr();
 
 	for(i=1; i<=5; i++)
@@ -12,9 +12,8 @@ void main()
 		{
 			printf(" ");
 		}
-		space--;
-
-		for(j=i; j>=1; j--)
+		space++;
+		for(j=5; j>=i; j--)
 		{
 			printf("%d",j);
 		}
