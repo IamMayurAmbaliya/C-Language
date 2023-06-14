@@ -20,6 +20,7 @@ void main()
 		scanf("%d",&b[i]);
 	}
 	
+	
 	for(i=0; i<n; i++)
 	{
 		printf("ARRAY C IS : %d\n",a[i]+b[i]);
