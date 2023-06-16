@@ -27,18 +27,14 @@ void main()
 	}
 	
 	
-	printf("ARRAY C IS : ");
+	printf("\nARRAY C IS : ");
 	for(i=0; i<n; i++)
 	{
-		if(i<n)
-		{
-			c[i] = a[i];
-		}
-		else if(i<j)
-		{
-			c[i] = b[i];
-		}	
+		printf("%d ",a[i]);
 	}
-
-	printf("%d %d",c[i]);	
+	
+	for(i=0; i<j; i++)
+	{
+		printf("%d ",b[i]);
+	}
 }
