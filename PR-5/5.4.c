@@ -24,7 +24,7 @@ void main()
 	printf("\nenter row number : ");
 	scanf("%d",&row);
 	
-	printf("\nelements of row : ");
+	printf("elements of row %d: ",row);
 	for(i=0 ; i<r ; i++)
 	{
 		for(j=0 ; j<c ; j++)
@@ -41,7 +41,7 @@ void main()
 	
 	printf("\n\nenter column number : ");
 	scanf("%d",&column);
-	printf("\nelements of column : ");
+	printf("elements of column %d: ",column);
 	for(i=0 ; i<r ; i++)
 	{
 		for(j=0 ; j<c ; j++)

@@ -32,8 +32,8 @@ void main()
 
 void main()
 {
-	char str[20] , f[122]={0};
-	int i , len ;
+	char str[20];
+	int i , len , f[122]={0};
 	
 	printf("ENTER ANY STRING : ");
 	gets(str);

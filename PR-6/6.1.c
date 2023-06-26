@@ -4,29 +4,33 @@
 void main()
 {
 	char str[20];
-	int i , j , count=0 , len ;
+	int begin , end , len , count=0;
 	
 	printf("ENTER ANY STRING : ");
 	scanf("%s",&str);
 	
-	for(i=0 ; i != NULL ; i++)
+	for(begin=0 ; str[begin] != NULL; begin++)
 	{
 		count++;
 	}
 	
 	len = count ;
 	
-	for(i=0 ; i>len ; i++)
+	end = len-1 ;
+	
+	for(begin=0 ; begin<len/2 ; begin++)
 	{
-		for(j=len-1 ; j>i ; j++)
+		if(str[begin] != str[end])
 		{
-			if(str[i] != str[j])
-			{
-				printf("GIVEN STRING IS NOT PALINDROME");
-			}
-			
-		}
+			printf("GIVEN STRING IS NOT PALINDROME");
+			break;
+		}	
+		end--;
 	}
 	
-	printf("GIVEN STRING IS PALINDROME");
+	if(begin==len/2)
+	{
+		printf("GIVEN STRING IS PALINDROME");
+	}
+	
 }

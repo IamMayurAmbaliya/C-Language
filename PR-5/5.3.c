@@ -22,8 +22,8 @@ void main()
 	}
 	
 	printf("\nTHE TRANSPOSE MATRIX OF AN ARRAY : \n");
-	for(i=0 ; i<r ; i++)
-	{
+	//for(i=0 ; i<r ; i++)
+	//{
 		for(j=0 ; j<c ; j++)
 		{
 			for(i=0 ; i<r ; i++)
@@ -32,6 +32,6 @@ void main()
 			}
 			printf("\n");
 		}	
-	}	
+	//}	
 }
 	
