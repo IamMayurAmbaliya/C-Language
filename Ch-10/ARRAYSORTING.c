@@ -20,6 +20,10 @@ void arrayinput(int a[] , int n)
 	}
 }
 
+int min(int arrayinput , int n)
+{
+	return 
+}
 void main()
 {
 	int n ;
@@ -30,7 +34,7 @@ void main()
 	
 	arrayinput(a,n);
 	
-	int i ,j;
+	int min=0 ;
 	
 	for(i=0 ; i<n ; i++)
 	{
