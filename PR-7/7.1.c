@@ -55,25 +55,25 @@ void main()
 				a=first();
 				b=second();
 				sub(a,b);
-				printf("\nsub :%d",sub(a,b));
+				printf("\nsubtraction :%d",sub(a,b));
 				break;
 			case 3 :
 				a=first();
 				b=second();
 				mul(a,b);
-				printf("\nmul :%d",mul(a,b));
+				printf("\nmultiplication :%d",mul(a,b));
 				break;
 			case 4 :
 				a=first();
 				b=second();
 				div(a,b);
-				printf("\ndiv %d",div(a,b));
+				printf("\ndivision %d",div(a,b));
 				break;
 			case 5 :
 				a=first();
 				b=second();
 				mod(a,b);
-				printf("\nmod :%d",mod(a,b));
+				printf("\nmodulus :%d",mod(a,b));
 				break;
 			case 6 :
 				break;	
