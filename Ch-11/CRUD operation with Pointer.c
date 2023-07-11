@@ -1,61 +1,72 @@
 #include<stdio.h>
 
-int n ;
-int getInt();
-void arrayInput(int a[]);
-void arrayDisplay(int a[]);
-void arrayCRUD(int a[]);
-void arrayInsert(int a[]);
-void arrayUpdate(int a[]);
-void arrayDelete(int a[]);
-
-void main()
-{
-	int n ;
-	
-	printf("ENTER ARRAY's LENGTH : ");
-	n=getInt();
-	
-	int a[n];
-	
-	arrayInput(a);        //array nu only name j levu ......not a[]... but only a variable ne call karavvo
-	
-	arrayDisplay(a);
-	
-	arrayCRUD(a);
-}
+void arrayInput(int a[] , int n);
+void arrayDisplay(int a[] , int n);
+void arrayCRUD(int a[] , int n);
+void arrayInsert(int a[] , int n);
+void arrayUpdate(int a[] , int n);
+void arrayDelete(int a[] , int n);
 
 int getInt()
 {
-	int x ;
-	
+	int x;
 	scanf("%d",&x);
 	
-	return x ;
+	return x;
 }
 
-void arrayInput(int a[])
+void main()
 {
-	int i ;
+	int n, i ;
+	
+	printf("enter array length : ");
+	n = getInt();
+	
+	int a[n];
+	int *p[n];
+	
+	arrayInput(a,n);        //array nu only name j levu ......not a[]... but only a variable ne call karavvo
+	
+	arrayDisplay(a,n);
+	
+	arrayCRUD(a,n);
+}
+
+
+void arrayInput(int a[] , int n)
+{
+	int i;
+	int *p[i];
+	
+	for(i=0; i<n; i++)
+	{
+		p[i] = &a[i] ;
+	}
 	
 	for(i=0; i<n; i++)
 	{
 		printf("ENTER %d ELEMENT : ",i);
-		scanf("%d",&a[i]);
+		scanf("%d",p[i]);
 	}
 }
 
-void arrayDisplay(int a[])
+void arrayDisplay(int a[] , int n)
 {
-	int i ;
+	int i;
+	int *p[i];
 	
 	for(i=0; i<n; i++)
 	{
-		printf("%d) ELEMENT : %d \n",i,a[i]);
+		p[i] = &a[i] ;
+	}
+	
+	for(i=0; i<n; i++)
+	{
+		printf("%d) ELEMENT : %d \n",i,*p[i]);
 	}
 }
 
-void arrayCRUD(int a[])
+void arrayCRUD(int a[] , int n)
 {
 	int choice ;
 	
@@ -67,16 +78,16 @@ void arrayCRUD(int a[])
 		switch(choice)
 		{
 			case 1 :
-				arrayInsert(a) ;
+				arrayInsert(a,n) ;
 				break ;
 			case 2 :
-				arrayUpdate(a) ;
+				arrayUpdate(a,n) ;
 				break ;
 			case 3 :
-				arrayDelete(a) ;
+				arrayDelete(a,n) ;
 				break ;
 			case 4 :
-				arrayDisplay(a) ;
+				arrayDisplay(a,n) ;
 				break ;	
 			case 5 :
 				break ;			
@@ -86,7 +97,7 @@ void arrayCRUD(int a[])
 	}while(choice != 5);
 }
 
-void arrayInsert(int a[])
+void arrayInsert(int a[] , int n)
 {
 	int pos , val , i ;
 	
@@ -103,7 +114,7 @@ void arrayInsert(int a[])
 	n++ ;                    //length ma ek plus thay jase insert kari e so ++
 }
 
-void arrayUpdate(int a[])
+void arrayUpdate(int *a[] , int n)
 {
 	int pos , val ;
 	
@@ -115,7 +126,7 @@ void arrayUpdate(int a[])
 	a[pos] = val ;
 }
 
-void arrayDelete(int a[])
+void arrayDelete(int *a[] , int n)
 {
 	int pos , i ;
 	
